@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:100,500,700);
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color:deeppink;
+	font-family: 'Dosis';
+	height: 100%;
+	color:wheat;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;}
+
+.main{
+	width: 90%;
+	padding-top:45px;
+	outline: 1px solid #FF60B6;
+	list-style: none;
+	background-color:rgba(255, 96, 182,.9);
+	position:fixed;
+	z-index: 1000;
+	left: -100%;
+	transition:left 1s;
+	height: 100vh;}
+.main li{
+	border-top: 1px solid #FF60B6;
+}
+.main li a{
+	text-decoration: none;
+	color:white;
+	text-transform: uppercase;
+	line-height: 2.5;
+	display: block;
+	padding-left:15px;
+}
+.main li a:hover, .main li a:active{
+	background-color:darkseagreen;
+}
+.main-bar{
+	width: 25px;
+	position: absolute;
+	z-index: 1001;
+	top:15px;
+	left:15px;
+	cursor:pointer;
+}
+.main-bar .bar{
+	height: 3px;
+	background-color: white;
+	transition:all 1s;
+}
+.main-bar .uno,.main-bar .dos,.main-bar .tres{
+	margin-bottom:3px;
+}
+/*clases que se agregaran*/
+.abrir{
+	left:0;
+	transition:left 1s;
+}
+.rotar .uno{
+	transform: rotate(45deg) translate(5px, 5px); 
+}
+.rotar .dos{
+ 	opacity: 0;	
+}
+ .rotar .tres{
+	transform: rotate(-45deg) translate(3px, -3px); 	 
+}
+
+/*container*/
+.container{
+	height: 100%;
+	padding:20%;
+}
+.container a{
+	display: inline-block;
+	margin:45px 15px 0px;
+}
+.container img{
+	width: 150px;
+	height: 150px;
+
+}
+
+.modal{
+	display:none;
+}
+.modal:target{
+	display: block;
+	position: absolute;
+	transition:all 2s;
+	z-index: 1010;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background-color: yellow;
+}
+.container-modal{
+	background-color: yellow;
+	padding-bottom: 15px;
+  width: 100%;
+}
+.modal *{
+	text-align: center;
+	display: block;
+}
+.modal img{
+	margin:0 auto 10px;
+	width:90%;
+	max-width: 250px;
+}
+
+.modal .closed{
+	display: inline-block;
+	font-size: 2em;
+	text-align:right;
+	cursor:pointer;
+	margin: 0px 15px;
+}
+.modal p{
+	max-width: 250px;
+	text-align: justify;
+	width:90%;
+	margin:0 auto 0 ;
+}
+#fixered{
+	position: fixed;
+	bottom: 0;
+	z-index: 1200;
+	background-color: white;
+	width: 100%;
+	padding:10px;
+	text-align: center;
+}
+#fixered a{
+	text-decoration: underline;
+}
